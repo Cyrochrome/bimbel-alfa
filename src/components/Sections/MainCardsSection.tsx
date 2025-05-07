@@ -2,13 +2,13 @@
 
 import SectionTemplate from './SectionTemplate';
 import Image from 'next/image';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 interface Card {
   label: string;
   img: string;
   href?: string;
-  modalContent?: string;
+  modalContent?: ReactNode;
 }
 
 export default function MainCardsSection() {
@@ -18,12 +18,27 @@ export default function MainCardsSection() {
     {
       label: 'DAFTAR SEKARANG!',
       img: '/assets/img/maincard1.png',
-      modalContent: 'Form pendaftaran langsung bisa diisi di sini.',
+      modalContent: (
+        <div className="flex flex-row justify-center gap-2 sm:gap-3 md:gap-4 overflow-hidden items-center">
+          <a
+            href="https://wa.me/6285947372386?text=Halo%21%20Saya%20Ingin%20bertanya%20mengenai%20paket%20pembelajaran%20yang%20tersedia%20di%20Bimbel%20Alfa%21"
+            className="rounded-full py-2 px-4 bg-lilac text-white transform hover:scale-[1.05] transition-transform will-change-transform"
+          >
+            Pak Jerry
+          </a>
+          <a
+            href="https://wa.me/6285963156614?text=Halo%21%20Saya%20Ingin%20bertanya%20mengenai%20paket%20pembelajaran%20yang%20tersedia%20di%20Bimbel%20Alfa%21"
+            className="rounded-full py-2 px-4 bg-lilac text-white transform hover:scale-[1.05] transition-transform will-change-transform"
+          >
+            Kak Zahra
+          </a>
+        </div>
+      ),
     },
     {
       label: 'CEK LOKASI',
       img: '/assets/img/maincard2.png',
-      href: 'https://maps.google.com/?q=Bimbel+Alfa+Kalisari',
+      href: 'https://maps.app.goo.gl/HZTPYU15zRe1SPRT8',
     },
     {
       label: 'KENALAN YUK!',
@@ -33,7 +48,7 @@ export default function MainCardsSection() {
   ];
 
   return (
-    <SectionTemplate backgroundSrc="/assets/img/bg3-bimbel-alfa.png">
+    <SectionTemplate backgroundSrcs={['/assets/img/bg3-bimbel-alfa.png']}>
       <div className="absolute inset-0 flex justify-center items-center px-4">
         <div className="w-full max-w-screen-lg text-center text-lilac">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-3 font-semibold">
@@ -73,8 +88,8 @@ export default function MainCardsSection() {
 
       {/* Simple Modal */}
       {activeModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white text-black p-6 rounded-lg max-w-sm w-full relative">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-cream text-lilac p-6 rounded-lg max-w-sm w-full relative">
             <h2 className="text-xl font-bold mb-4">{activeModal.label}</h2>
             <div>{activeModal.modalContent}</div>
             <button
