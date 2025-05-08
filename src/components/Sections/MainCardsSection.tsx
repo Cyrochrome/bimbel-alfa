@@ -90,8 +90,7 @@ export default function MainCardsSection() {
                 <Wrapper
                   key={idx}
                   {...props}
-                  className="block min-w-[90px] sm:min-w-[100px] transform hover:scale-[1.05] transition-transform will-change-transform"
-                  style={{ maxWidth: '120px' }}
+                  className="block max-w-[100px] min-w-[80px] sm:min-w-[100px] sm:max-w-[120px] transform hover:scale-[1.05] transition-transform will-change-transform"
                 >
                   <Image
                     src={card.img}
