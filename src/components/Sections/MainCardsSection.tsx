@@ -42,13 +42,13 @@ export default function MainCardsSection() {
       modalContent: (
         <div className="flex flex-row justify-center gap-2 sm:gap-3 md:gap-4 overflow-hidden items-center">
           <a
-            href="https://wa.me/6285947372386?text=Halo%21%20Saya%20Ingin%20bertanya%20mengenai%20paket%20pembelajaran%20yang%20tersedia%20di%20Bimbel%20Alfa%21"
+            href="https://wa.me/6285947372386?text=Halo%21%20saya%20ingin%20daftar%20les%20di%20bimbel%20Alfa%21"
             className="rounded-full py-2 px-4 bg-lilac text-white transform hover:scale-[1.05] transition-transform will-change-transform"
           >
             Pak Jerry
           </a>
           <a
-            href="https://wa.me/6285963156614?text=Halo%21%20Saya%20Ingin%20bertanya%20mengenai%20paket%20pembelajaran%20yang%20tersedia%20di%20Bimbel%20Alfa%21"
+            href="https://wa.me/6285963156614?text=Halo%21%20saya%20ingin%20daftar%20les%20di%20bimbel%20Alfa%21"
             className="rounded-full py-2 px-4 bg-lilac text-white transform hover:scale-[1.05] transition-transform will-change-transform"
           >
             Kak Zahra
