@@ -10,17 +10,17 @@ import Image from 'next/image';
 const tutors = [
   {
     name: 'Kak Tuti',
-    quote: 'Perubahan tidak akan datang dari kaki yang diam',
+    quote: 'Perubahan tidak akan datang dari kaki yang diam.',
     image: '/assets/img/tutors/kak-tuti.jpg',
   },
   {
     name: 'Kak Zahra',
-    quote: 'Lakukan segala sesuatu yang ingin kau lakukan, selama kesempatan itu ada',
+    quote: 'Lakukan segala sesuatu yang ingin kau lakukan, selama kesempatan itu ada.',
     image: '/assets/img/tutors/kak-zahra.jpg',
   },
   {
     name: 'Kak Nabila',
-    quote: 'Selama masih ada yang namanya perjuangan, tidak akan ada yang sia-sia',
+    quote: 'Selama masih ada yang namanya perjuangan, tidak akan ada yang sia-sia.',
     image: '/assets/img/tutors/kak-nabila.jpg',
   },
   {
@@ -48,12 +48,12 @@ const tutors = [
   },
   {
     name: 'Kak Raafid',
-    quote: 'Jadikan pengalaman sebagai pelajaran bukan cobaan',
+    quote: 'Jadikan pengalaman sebagai pelajaran bukan cobaan.',
     image: '/assets/img/tutors/kak-raafid.jpg',
   },
   {
     name: 'Kak Savira',
-    quote: 'Never give up on what you really want to do',
+    quote: 'Never give up on what you really want to do.',
     image: '/assets/img/tutors/kak-savira.jpg',
   },
 ];

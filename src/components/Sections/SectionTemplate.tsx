@@ -45,7 +45,7 @@ export default function StackedSectionTemplate({
         />
       ))}
 
-      <div className="absolute inset-0 z-10">{children}</div>
+      <div className="relative z-10 w-full h-full">{children}</div>
     </section>
   );
 }

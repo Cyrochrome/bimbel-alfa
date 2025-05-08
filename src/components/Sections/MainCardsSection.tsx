@@ -2,7 +2,8 @@
 
 import SectionTemplate from './SectionTemplate';
 import Image from 'next/image';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 interface Card {
   label: string;
@@ -13,6 +14,26 @@ interface Card {
 
 export default function MainCardsSection() {
   const [activeModal, setActiveModal] = useState<Card | null>(null);
+  useEffect(() => {
+    if (activeModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [activeModal]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveModal(null);
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const cards: Card[] = [
     {
@@ -87,20 +108,28 @@ export default function MainCardsSection() {
       </div>
 
       {/* Simple Modal */}
-      {activeModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-cream text-lilac p-6 rounded-lg max-w-sm w-full relative">
-            <h2 className="text-xl font-bold mb-4">{activeModal.label}</h2>
-            <div>{activeModal.modalContent}</div>
-            <button
-              onClick={() => setActiveModal(null)}
-              className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl"
+      {activeModal &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm"
+            onClick={() => setActiveModal(null)}
+          >
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="bg-cream text-lilac p-6 rounded-lg max-w-sm w-full relative fade-in-up"
             >
-              &times;
-            </button>
-          </div>
-        </div>
-      )}
+              <h2 className="text-xl font-bold mb-4">{activeModal.label}</h2>
+              <div>{activeModal.modalContent}</div>
+              <button
+                onClick={() => setActiveModal(null)}
+                className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl"
+              >
+                &times;
+              </button>
+            </div>
+          </div>,
+          document.body
+        )}
     </SectionTemplate>
   );
 }

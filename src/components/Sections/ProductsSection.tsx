@@ -5,64 +5,63 @@ export default function ProductsSection() {
     <SectionTemplate
       backgroundSrcs={['/assets/img/bg4-bimbel-alfa.png', '/assets/img/bg5-bimbel-alfa.png']}
     >
-      <div className="absolute inset-0 flex flex-col justify-center items-center px-4 py-8 text-lilac">
-        <div className="flex flex-col gap-4 text-sm sm:text-base max-w-5xl w-full justify-center items-center">
-          {/* CALISTUNG */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
-            <h3 className="text-center font-semibold text-lg mb-1 leading-tight">CALISTUNG</h3>
-            <ul className="leading-tight">
-              <li>1x/minggu - 90RB/bulan</li>
-              <li>2x/minggu - 165RB/bulan</li>
-              <li>3x/minggu - 230RB/bulan</li>
-            </ul>
-          </div>
+      <div className="relative w-full h-full flex flex-col justify-center items-center px-2 sm:px-4 py-4 text-lilac z-10">
+        <div className="flex flex-col gap-1 text-xs sm:text-sm max-w-5xl w-full items-center">
+          {[
+            {
+              title: 'CALISTUNG',
+              items: [
+                '1x/minggu - 90RB/bulan',
+                '2x/minggu - 165RB/bulan',
+                '3x/minggu - 230RB/bulan',
+              ],
+            },
+            {
+              title: 'MATEMATIKA',
+              items: [
+                'SD - 1x/minggu - 99RB/bulan',
+                'SMP - 1x/minggu - 1300RB/bulan',
+                'SMA - 1x/minggu - 150RB/bulan',
+              ],
+            },
+            {
+              title: 'BAHASA INGGRIS',
+              items: [
+                'SD - 1x/minggu - 99RB/bulan',
+                'SMP - 1x/minggu - 130RB/bulan',
+                'SMA - 1x/minggu - 150RB/bulan',
+              ],
+            },
+            {
+              title: 'MATEMATIKA & BAHASA INGGRIS',
+              items: [
+                'SD - 2x/minggu - 175RB/bulan',
+                'SMP - 2x/minggu - 240RB/bulan',
+                'SMA - 2x/minggu - 260RB/bulan',
+              ],
+            },
+            {
+              title: 'PELAJARAN POKOK',
+              items: ['SD - 3x/minggu - 240RB/bulan', 'SMP - 3x/minggu - 260RB/bulan'],
+            },
+          ].map((section, idx) => (
+            <div
+              key={idx}
+              className="bg-cream rounded-xl w-full max-w-sm px-2 sm:px-3 sm:py-3 leading-tight transform hover:scale-[1.02] transition-transform"
+            >
+              <h3 className="text-center font-semibold text-sm sm:text-base mb-1">
+                {section.title}
+              </h3>
+              <ul className="space-y-0.5 text-[11px] sm:text-xs">
+                {section.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
-          {/* Matematika */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
-            <h3 className="text-center font-semibold text-lg mb-1 leading-tight">MATEMATIKA</h3>
-            <ul className="leading-tight">
-              <li>SD - 1x/minggu - 99RB/bulan</li>
-              <li>SMP - 1x/minggu - 240RB/bulan</li>
-              <li>SMA - 1x/minggu - 260RB/bulan</li>
-            </ul>
-          </div>
-
-          {/* Bahasa Inggris */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
-            <h3 className="text-center font-semibold text-lg mb-1 leading-tight">BAHASA INGGRIS</h3>
-            <ul className="leading-tight">
-              <li>SD - 1x/minggu - 99RB/bulan</li>
-              <li>SMP - 1x/minggu - 130RB/bulan</li>
-              <li>SMA - 1x/minggu - 150RB/bulan</li>
-            </ul>
-          </div>
-
-          {/* Matematika & Bahasa Inggris */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
-            <h3 className="text-center font-semibold text-lg mb-1 leading-tight">
-              MATEMATIKA & BAHASA INGGRIS
-            </h3>
-            <ul className="leading-tight">
-              <li>SD - 2x/minggu - 175RB/bulan</li>
-              <li>SMP - 2x/minggu - 240RB/bulan</li>
-              <li>SMA - 2x/minggu - 260RB/bulan</li>
-            </ul>
-          </div>
-
-          {/* Pelajaran Pokok */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
-            <h3 className="text-center font-semibold text-lg mb-1 leading-tight">
-              PELAJARAN POKOK
-            </h3>
-            <ul className="leading-tight">
-              <li>SD - 3x/minggu - 240RB/bulan</li>
-              <li>SMP - 3x/minggu - 260RB/bulan</li>
-            </ul>
-          </div>
-
-          {/* Privat Info */}
-          <div className="bg-cream rounded-2xl max-w-md text-center mt-2 px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
-            <p className="font-medium italic leading-tight text-cemter">
+          <div className="bg-cream rounded-xl w-full max-w-sm px-2 py-2 text-center mt-1">
+            <p className="italic font-medium text-[11px] sm:text-xs leading-tight">
               Kalo kamu mau privat juga bisa loh!
             </p>
           </div>
