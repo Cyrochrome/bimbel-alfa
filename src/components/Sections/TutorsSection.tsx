@@ -97,10 +97,14 @@ export default function TutorsSection() {
         </div>
 
         {/* Bottom-left callout */}
-        <div className="absolute bottom-4 left-4 text-white text-xs sm:text-sm max-w-xs sm:max-w-sm">
-          <p className="font-bold text-lightorange mb-1">LET&apos;S STUDY WITH US!!</p>
-          <p className="italic">
-            Sama kita kamu ga cuma akan belajar, tapi juga bermain, bercerita, dan bereksperimen.
+        <div className="absolute bottom-0.5 left-4 text-white text-xs sm:text-sm max-w-xs sm:max-w-sm">
+          <p className="font-bold text-lightorange mb-0.5">LET&apos;S STUDY WITH US!!</p>
+          <p className="italic leading-tight">
+            Sama kita kamu ga cuma akan belajar,
+            <br />
+            tapi juga bermain, bercerita,
+            <br />
+            dan bereksperimen.
           </p>
         </div>
       </div>
