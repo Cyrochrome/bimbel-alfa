@@ -1,8 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @font-face {
-  font-family: "Baloo Tamma";
-  src: url("/fonts/BalooTamma-Regular.ttf") format("truetype");
+  font-family: 'Baloo Tamma';
+  src: url('/fonts/BalooTamma-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,8 +12,9 @@
   --color-dirtywhite: #f9f6f1;
   --color-cream: #feeacb;
   --color-lightblue: #b6d5f0;
+  --color-lightorange: #fdd04e;
 
-  --font-display: "Baloo Tamma", "sans-serif";
+  --font-display: 'Baloo Tamma', 'sans-serif';
 }
 
 html,

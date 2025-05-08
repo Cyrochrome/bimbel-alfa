@@ -8,7 +8,7 @@ export default function ProductsSection() {
       <div className="absolute inset-0 flex flex-col justify-center items-center px-4 py-8 text-lilac">
         <div className="flex flex-col gap-4 text-sm sm:text-base max-w-5xl w-full justify-center items-center">
           {/* CALISTUNG */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4">
+          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
             <h3 className="text-center font-semibold text-lg mb-1 leading-tight">CALISTUNG</h3>
             <ul className="leading-tight">
               <li>1x/minggu - 90RB/bulan</li>
@@ -18,7 +18,7 @@ export default function ProductsSection() {
           </div>
 
           {/* Matematika */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4">
+          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
             <h3 className="text-center font-semibold text-lg mb-1 leading-tight">MATEMATIKA</h3>
             <ul className="leading-tight">
               <li>SD - 1x/minggu - 99RB/bulan</li>
@@ -28,7 +28,7 @@ export default function ProductsSection() {
           </div>
 
           {/* Bahasa Inggris */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4">
+          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
             <h3 className="text-center font-semibold text-lg mb-1 leading-tight">BAHASA INGGRIS</h3>
             <ul className="leading-tight">
               <li>SD - 1x/minggu - 99RB/bulan</li>
@@ -38,7 +38,7 @@ export default function ProductsSection() {
           </div>
 
           {/* Matematika & Bahasa Inggris */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4">
+          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
             <h3 className="text-center font-semibold text-lg mb-1 leading-tight">
               MATEMATIKA & BAHASA INGGRIS
             </h3>
@@ -50,7 +50,7 @@ export default function ProductsSection() {
           </div>
 
           {/* Pelajaran Pokok */}
-          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4">
+          <div className="bg-cream rounded-2xl w-full max-w-md px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
             <h3 className="text-center font-semibold text-lg mb-1 leading-tight">
               PELAJARAN POKOK
             </h3>
@@ -61,7 +61,7 @@ export default function ProductsSection() {
           </div>
 
           {/* Privat Info */}
-          <div className="bg-cream rounded-2xl max-w-md text-center mt-2 px-3 sm:px-4">
+          <div className="bg-cream rounded-2xl max-w-md text-center mt-2 px-3 sm:px-4 transform hover:scale-[1.05] transition-transform will-change-transform">
             <p className="font-medium italic leading-tight text-cemter">
               Kalo kamu mau privat juga bisa loh!
             </p>
