@@ -99,7 +99,7 @@ export default function TutorsSection() {
         {/* Bottom-left callout */}
         <div className="absolute bottom-0.5 left-4 text-white text-xs sm:text-sm max-w-xs sm:max-w-sm">
           <p className="font-bold text-lightorange mb-0.5">LET&apos;S STUDY WITH US!!</p>
-          <p className="italic leading-tight">
+          <p className="italic leading-3">
             Sama kita kamu ga cuma akan belajar,
             <br />
             tapi juga bermain, bercerita,
